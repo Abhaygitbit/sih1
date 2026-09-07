@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-primary: #E8F5E9;
+    --bg-surface: #ffffff;
+    --bg-card: #ffffff;
+    --border-subtle: #C8E6C9;
+    --border-accent: #A5D6A7;
+    --text-primary: #1B5E20;
+    --text-secondary: #2E7D32;
+    --primary-deep: #1B5E20;
+    --primary-green: #2E7D32;
+  }
+
+  .dark {
+    --bg-primary: #0A1A12;
+    --bg-surface: #12281E;
+    --bg-card: #12281E;
+    --border-subtle: #1F3F30;
+    --border-accent: #2E5C46;
+    --text-primary: #E8F5E9;
+    --text-secondary: #A5D6A7;
+    --primary-deep: #2E7D32;
+    --primary-green: #4CAF50;
+  }
+
+  * {
+    font-family: 'Calibri', 'Carlito', 'Segoe UI', Arial, sans-serif !important;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Calibri', 'Carlito', 'Segoe UI', Arial, sans-serif !important;
+    font-size: 14pt;
+    line-height: 1.6;
+    letter-spacing: normal;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .dark body {
+    background-color: #0A1A12;
+    color: #E8F5E9;
+  }
+
+  h1, .calibri-title {
+    font-family: 'Calibri', 'Carlito', 'Segoe UI', Arial, sans-serif !important;
+    font-size: 30pt !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    color: inherit;
+  }
+
+  h2, h3, .calibri-heading {
+    font-family: 'Calibri', 'Carlito', 'Segoe UI', Arial, sans-serif !important;
+    font-size: 20pt !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+    color: inherit;
+  }
+
+  .calibri-body {
+    font-family: 'Calibri', 'Carlito', 'Segoe UI', Arial, sans-serif !important;
+    font-size: 14pt !important;
+    line-height: 1.6 !important;
+  }
+
+  .calibri-bullet {
+    font-family: 'Calibri', 'Carlito', 'Segoe UI', Arial, sans-serif !important;
+    font-size: 13pt !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(46, 125, 50, 0.4);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(165, 214, 167, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(46, 125, 50, 0.7);
+}
+
+/* Clean cards and panels */
+.glass-panel, .clean-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-panel, .dark .clean-card {
+  background: #12281E;
+  border: 1px solid #1F3F30;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtle pulse */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
