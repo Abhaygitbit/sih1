@@ -168,7 +168,10 @@ export const AyurvedicHomeView: React.FC<AyurvedicHomeViewProps> = ({
         id="home-statutory-metrics"
         className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-[13pt]"
       >
-        <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#12281E] border border-[#C8E6C9] dark:border-[#1F3F30] shadow-xs">
+        <div 
+          className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#12281E] border border-[#C8E6C9] dark:border-[#1F3F30] shadow-xs"
+          style={{ height: '136px' }}
+        >
           <span className="block text-[20pt] sm:text-[24pt] font-bold text-[#1B5E20] dark:text-white leading-tight">
             {isHindi ? '4.5 लाख+' : '4.5 Lakh+'}
           </span>

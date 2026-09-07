@@ -153,7 +153,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* 3. Main Navigation Bar (Clean White in light mode, Deep Forest in dark mode) */}
       <div 
         id="app-top-navbar" 
-        className="w-full bg-white dark:bg-[#12281E] text-[#1B5E20] dark:text-[#E8F5E9] min-h-[64px] flex items-center border-b border-[#C8E6C9] dark:border-[#1F3F30] px-3 sm:px-6 lg:px-8 transition-colors"
+        className="w-full max-w-full mx-auto bg-white dark:bg-[#12281E] text-[#1B5E20] dark:text-[#E8F5E9] min-h-[64px] flex items-center border-b border-[#C8E6C9] dark:border-[#1F3F30] px-3 sm:px-6 lg:px-8 transition-colors"
+        style={{ width: '1330px' }}
       >
         <div className="max-w-7xl mx-auto w-full flex items-center justify-between gap-2 sm:gap-4">
           

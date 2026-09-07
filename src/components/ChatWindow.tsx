@@ -15,7 +15,8 @@ import {
   CornerDownLeft,
   Loader2,
   FileCheck,
-  UserCheck
+  UserCheck,
+  X
 } from 'lucide-react';
 import { ChatMessage, ClassificationState, Jurisdiction, Language, UserProfile } from '../types';
 import { SAMPLE_PROMPTS, UI_TRANSLATIONS } from '../data/ayurvedaData';
@@ -29,6 +30,7 @@ interface ChatWindowProps {
   onClearChat: () => void;
   classificationContext?: ClassificationState;
   user?: UserProfile | null;
+  onExitChat?: () => void;
 }
 
 export const ChatWindow: React.FC<ChatWindowProps> = ({
@@ -39,7 +41,8 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
   language,
   onClearChat,
   classificationContext,
-  user
+  user,
+  onExitChat
 }) => {
   const [inputText, setInputText] = useState('');
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -152,6 +155,18 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span className="hidden sm:inline text-[11px]">{t.clearChat}</span>
+            </button>
+          )}
+
+          {onExitChat && (
+            <button
+              id="exit-ai-assistant-btn"
+              onClick={onExitChat}
+              title={language === 'hi' ? 'एआई सहायक से बाहर निकलें' : 'Exit AI Assistant'}
+              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-xs flex items-center gap-1 cursor-pointer ml-1"
+            >
+              <X className="w-3.5 h-3.5" />
+              <span className="text-[11px] font-semibold">{language === 'hi' ? 'बंद करें' : 'Exit'}</span>
             </button>
           )}
         </div>

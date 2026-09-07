@@ -473,17 +473,20 @@ export default function App() {
               onClearChat={handleClearChat}
               classificationContext={classification}
               user={user}
+              onExitChat={() => setActiveTab('home')}
             />
           </div>
         )}
 
       </main>
 
-      {/* Floating Robot with prompts */}
-      <FloatingRobot 
-        language={language} 
-        onOpenChat={handleOpenChatWithPrompt} 
-      />
+      {/* Floating Robot with prompts (disappears when activeTab is chat / AI assistant, reappears when exited) */}
+      {activeTab !== 'chat' && (
+        <FloatingRobot 
+          language={language} 
+          onOpenChat={handleOpenChatWithPrompt} 
+        />
+      )}
 
       {/* Resources & Portals Modal */}
       <ResourcesModal

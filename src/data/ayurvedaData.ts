@@ -221,6 +221,11 @@ export const STATUTORY_GUIDES: StatutoryGuide[] = [
 
 export const SAMPLE_PROMPTS = [
   {
+    en: 'Compare National (Indian Patents Act) vs International (PCT/USPTO/EPO) regimes for Ayurvedic patents.',
+    hi: 'आयुर्वेदिक पेटेंट के लिए राष्ट्रीय (भारतीय पेटेंट कानून) और अंतर्राष्ट्रीय (PCT/USPTO/EPO) नियमों की तुलना करें।',
+    topic: 'Dual Regime & PCT Roadmap'
+  },
+  {
     en: 'Can I patent a synergistic combination of Ashwagandha and Curcumin?',
     hi: 'क्या मैं अश्वगंधा और करक्यूमिन के मिश्रण पर पेटेंट ले सकता हूँ?',
     topic: 'Section 3(p) & 3(e) Synergy'
@@ -231,14 +236,14 @@ export const SAMPLE_PROMPTS = [
     topic: 'NBA / ABS Compliance'
   },
   {
+    en: 'Can I patent an Ayurvedic herbal extract internationally in the US (USPTO) or Europe (EPO)?',
+    hi: 'क्या मैं अमेरिका (USPTO) या यूरोप (EPO) में आयुर्वेदिक हर्बल अर्क का पेटेंट करा सकता हूँ?',
+    topic: 'International Patent Rules'
+  },
+  {
     en: 'What is the difference between Classical Ayurvedic vs Proprietary Medicine?',
     hi: 'शास्त्रीय आयुर्वेदिक और प्रोप्राइटरी औषधि में बौद्धिक संपदा का क्या अंतर है?',
     topic: 'Regulatory & IP Differences'
-  },
-  {
-    en: 'How do I register a Geographical Indication (GI) for an indigenous Ayurvedic cultivar?',
-    hi: 'किसी दुर्लभ औषधीय पौधे के लिए भौगोलिक उपदर्शन (GI) पंजीकरण कैसे करें?',
-    topic: 'GI of Goods Act'
   }
 ];
 

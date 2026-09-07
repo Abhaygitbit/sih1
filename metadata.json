@@ -1,6 +1,6 @@
 {
   "name": "Remix IP-SAKTI Sahayak",
-  "description": "AI assistant for Ayurveda Intellectual Property guidance, Section 3(p) patent eligibility, ABS compliance, TKDL, and AYUSH product classification.",
+  "description": "Multilingual, RAG-based AI assistant for Intellectual Property and regulatory guidance in Ayurveda across national and international regimes, offering statutory comparisons and international patent suggestions.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
